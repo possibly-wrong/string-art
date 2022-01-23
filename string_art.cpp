@@ -141,7 +141,7 @@ int main(int argc, char *argv[])
     }
     std::printf("\n");
     std::FILE* output_file = std::fopen(argv[4], "wb");
-    std::fprintf(output_file, "P5\n%d %d\n255\n",
+    std::fprintf(output_file, "P5\n%ld %ld\n255\n",
         image_size * block_size, image_size * block_size);
     std::fwrite(&canvas[0],
         image_size * block_size, image_size * block_size, output_file);
